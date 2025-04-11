@@ -71,12 +71,12 @@
             >;
         };
 
-        layer_2 {
+        mouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                                    &trans  &trans  &trans
+&kp       &kp       &kp        &kp        &kp  &kp              &kp       &kp K_REDO      &kp K_PASTE     &kp K_COPY    &kp K_CUT        &kp K_UNDO  &kp
+&kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &kp  &kp         &kp  &kp  &kp  &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &kp         &kp
+&kp       &kp       &kp        &kp        &kp  &kp  &kp         &kp       &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp         &kp
+                               &kp        &kp  &kp                        &mkp RCLK       &mkp LCLK       &mkp MCLK
             >;
         };
     };
