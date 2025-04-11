@@ -4,9 +4,7 @@
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
@@ -55,49 +53,31 @@
 
         base {
             bindings = <
-&kp ESCAPE  &kp Q  &kp W  &kp F       &kp P      &kp B                        &kp UP                &kp J      &kp L          &kp U       &kp Y    &kp SEMI  &kp BACKSPACE
-&kp GRAVE   &kp A  &kp R  &kp S       &kp T      &kp G              &kp LEFT  &kp ENTER  &kp RIGHT  &kp M      &kp N          &kp E       &kp I    &kp O     &kp PAGE_UP
-&kp LSHIFT  &kp Z  &kp X  &kp C       &kp D      &kp V    &trans              &kp DOWN              &kp K      &kp H          &kp COMMA   &kp DOT  &kp FSLH  &kp PAGE_DOWN
-                          &kp ESCAPE  &kp SPACE  &kp TAB                                            &kp ENTER  &kp BACKSPACE  &kp DELETE
+&kp ESCAPE  &kp Q  &kp W  &kp F       &kp P        &kp B                        &kp UP                &kp J      &kp L          &kp U       &kp Y    &kp SEMI  &kp BACKSPACE
+&kp GRAVE   &kp A  &kp R  &kp S       &kp T        &kp G              &kp LEFT  &kp ENTER  &kp RIGHT  &kp M      &kp N          &kp E       &kp I    &kp O     &kp PAGE_UP
+&kp LSHIFT  &kp Z  &kp X  &kp C       &kp D        &kp V    &trans              &kp DOWN              &kp K      &kp H          &kp COMMA   &kp DOT  &kp FSLH  &kp PAGE_DOWN
+                          &kp ESCAPE  &lt 0 SPACE  &kp TAB                                            &kp ENTER  &kp BACKSPACE  &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
-        default_layer {
-            display-name = "QWERTY";
+        nav {
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp B                               &kp UP                &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&td0       &kp A  &kp S  &kp D     &kp F  &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp SPACE              &kp DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &kp LGUI  &mo 2  &lt 1 SPACE                                               &lt 1 ENTER  &mo 3  &kp RALT
+&none      &none         &none             &none           &none  &none                  &none         &kp K_REDO  &kp K_PASTE    &kp K_COPY     &kp K_CUT    &kp K_UNDO  &none
+&kt LMETA  &kt LEFT_ALT  &kt LEFT_CONTROL  &kt LEFT_SHIFT  &none  &none           &none  &none  &none  &kp LEFT    &kp DOWN       &kp UP_ARROW   &kp LEFT     &kp CLCK    &none
+&none      &none         &none             &none           &none  &none  &none           &none         &kp INSERT  &kp HOME       &kp PAGE_DOWN  &kp PAGE_UP  &kp END     &none
+                                           &none           &none  &none                                &kt ENTER   &kp BACKSPACE  &kp DELETE
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
-        lower_layer {
-            display-name = "NUMBER";
+        layer_2 {
             bindings = <
-&trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                                         &mmv MOVE_UP                     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
-                                         &trans        &trans        &trans                                                                          &kp INS          &kp DEL          &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                                    &trans  &trans  &trans
             >;
-
-            sensor-bindings = <&scroll_encoder>;
-        };
-
-        raise_layer {
-            display-name = "SYMBOL";
-            bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5   &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                    &trans     &trans     &kp SPACE                                                             &kp RET    &trans     &trans
-            >;
-
-            sensor-bindings = <&scroll_encoder>;
         };
     };
 };
