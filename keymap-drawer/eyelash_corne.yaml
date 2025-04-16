@@ -46,7 +46,7 @@ layers:
   - {t: LEFT WIN, h: media}
   - {t: '$$mdi:keyboard-space$$', h: mouse}
   - {t: '$$mdi:keyboard-tab$$', h: nav}
-  - {t: '$$mdi:keyboard-return$$', h: num}
+  - {t: '$$mdi:backspace$$', h: num}
   - {t: '$$mdi:apple-keyboard-option$$', h: sym}
   - {t: '$$mdi:apple-keyboard-control$$', h: fun}
   nav:
