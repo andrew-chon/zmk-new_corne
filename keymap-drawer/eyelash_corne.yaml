@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
   base:
-  - $$mdi:keyboard-esc$$
+  - $$mdi:apple-keyboard-command$$
   - Q
   - W
   - F
@@ -13,7 +13,7 @@ layers:
   - U
   - Y
   - {t: ;, s: ':'}
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - $$mdi:apple-keyboard-control$$
   - {t: '`', s: '~'}
   - A
   - R
@@ -28,7 +28,7 @@ layers:
   - E
   - I
   - O
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-shift$$
   - Z
   - X
@@ -43,12 +43,12 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
-  - {t: LEFT WIN, h: media}
+  - {t: '$$mdi:keyboard-esc$$', h: media}
   - {t: '$$mdi:keyboard-space$$', h: mouse}
   - {t: '$$mdi:keyboard-tab$$', h: nav}
-  - {t: '$$mdi:backspace$$', h: num}
-  - {t: '$$mdi:apple-keyboard-option$$', h: sym}
-  - {t: '$$mdi:apple-keyboard-control$$', h: fun}
+  - {t: '$$mdi:keyboard-return$$', h: num}
+  - {t: '$$mdi:backspace$$', h: sym}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: fun}
   nav:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
