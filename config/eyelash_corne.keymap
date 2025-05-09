@@ -54,7 +54,7 @@
 
         base {
             bindings = <
-&kp LEFT_GUI  &kp Q  &kp W  &kp F         &kp P        &kp B                          &kp UP                &kp J        &kp L            &kp U         &kp Y    &kp SEMI  &kp RIGHT_CONTROL
+&kp LEFT_GUI  &kp Q  &kp W  &kp F         &kp P        &kp B                          &kp UP                &kp J        &kp L            &kp U         &kp Y    &kp SQT   &kp RIGHT_CONTROL
 &kp GRAVE     &kp A  &kp R  &kp S         &kp T        &kp G                &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        &kp N            &kp E         &kp I    &kp O     &kp RIGHT_ALT
 &kp LSHIFT    &kp Z  &kp X  &kp C         &kp D        &kp V      &trans              &kp DOWN              &kp K        &kp H            &kp COMMA     &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
                             &lt 3 ESCAPE  &lt 2 SPACE  &lt 1 TAB                                            &lt 4 ENTER  &lt 5 BACKSPACE  &lt 6 DELETE
@@ -66,7 +66,7 @@
         nav {
             bindings = <
 &none      &none         &none             &none           &none  &none                  &none         &kp K_REDO  &kp K_PASTE    &kp K_COPY     &kp K_CUT    &kp K_UNDO  &none
-&kt LMETA  &kt LEFT_ALT  &kt LEFT_CONTROL  &kt LEFT_SHIFT  &none  &none           &none  &none  &none  &kp LEFT    &kp DOWN       &kp UP_ARROW   &kp LEFT     &kp CLCK    &none
+&kt LMETA  &kt LEFT_ALT  &kt LEFT_CONTROL  &kt LEFT_SHIFT  &none  &none           &none  &none  &none  &kp LEFT    &kp DOWN       &kp UP_ARROW   &kp RIGHT    &kp CLCK    &none
 &none      &none         &none             &none           &none  &none  &none           &none         &kp INSERT  &kp HOME       &kp PAGE_DOWN  &kp PAGE_UP  &kp END     &none
                                            &none           &none  &none                                &kt ENTER   &kp BACKSPACE  &kp DELETE
             >;
@@ -114,6 +114,15 @@
 &none  &kp F11  &kp F4  &kp F5  &kp F6     &none             &none  &none  &none  &none  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  &none
 &none  &kp F10  &kp F1  &kp F2  &kp F3     &none    &none           &none         &none  &none      &none      &none     &none     &none
                         &none   &kp SPACE  &kp TAB                                &none  &none      &none
+            >;
+        };
+
+        layer_7 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                                    &trans  &trans  &trans
             >;
         };
     };
